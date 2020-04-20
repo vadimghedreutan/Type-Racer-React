@@ -33,7 +33,7 @@ const Quotes = () => {
     {isError && <h1>Somthing went wrong...</h1>}
     {loading ? 
     
-    (<h1>Loading...</h1>) : 
+    (<h2>Loading...</h2>) : 
     
     (
       <div className="quote__content">        
