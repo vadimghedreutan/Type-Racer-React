@@ -1,27 +1,11 @@
 import React, {useState, useEffect} from 'react'
+import useQuotes from './Utils/useQuotes'
 
 import Icon from './icons'
 
 const Quotes = () => {
 
-  const [loading, setLoading] = useState(false)
-  const [quote, setQuote] = useState([])
-  const [isError, setError] = useState(false)
-  const [url] = useState('https://api.quotable.io/random')
-
-
-  async function fetchData()  {
-    setError(false);
-    setLoading(true);
-    try {
-      await fetch(url)
-      .then(res => res.json())
-      .then(data => setQuote(data))
-    } catch (error) {
-      setError(true)
-    }
-    setLoading(false);
-  }
+  const {loading, quote, isError, fetchData} = useQuotes()
 
   useEffect(() => {
     fetchData();
