@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useEffect} from 'react'
 import useQuotes from './Utils/useQuotes'
 
 import Icon from './icons'
